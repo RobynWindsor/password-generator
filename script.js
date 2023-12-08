@@ -143,43 +143,43 @@ function getRandom(arr) {
 }
 
 // // Function to generate password with user input
-// function generatePassword() {
-//   var options = getPasswordOptions();
-//   if (!options) {
-//     return ''; // Return an empty string if options are not valid
-//   }
-//   var possibleCharacters = [];
-//   var guaranteedCharacters = [];
+function generatePassword() {
+  var options = getPasswordOptions();
+  if (!options) {
+    return ''; // Return an empty string if options are not valid
+  }
+  var possibleCharacters = [];
+  var guaranteedCharacters = [];
 
-//   if (options.includeSpecial) {
-//     possibleCharacters = possibleCharacters.concat(specialCharacters);
-//     guaranteedCharacters.push(getRandom(specialCharacters));
-//   }
+  if (options.includeSpecial) {
+    possibleCharacters = possibleCharacters.concat(specialCharacters);
+    guaranteedCharacters.push(getRandom(specialCharacters));
+  }
 
-//   if (options.includeNumeric) {
-//     possibleCharacters = possibleCharacters.concat(numericCharacters);
-//     guaranteedCharacters.push(getRandom(numericCharacters));
-//   }
+  if (options.includeNumeric) {
+    possibleCharacters = possibleCharacters.concat(numericCharacters);
+    guaranteedCharacters.push(getRandom(numericCharacters));
+  }
 
-//   if (options.includeUppercase) {
-//     possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
-//     guaranteedCharacters.push(getRandom(upperCasedCharacters));
-//   }
+  if (options.includeUppercase) {
+    possibleCharacters = possibleCharacters.concat(upperCasedCharacters);
+    guaranteedCharacters.push(getRandom(upperCasedCharacters));
+  }
 
-//   if (options.includeLowercase) {
-//     possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
-//     guaranteedCharacters.push(getRandom(lowerCasedCharacters));
-//   }
-//   for (var i = guaranteedCharacters.length; i < options.length; i++) {
-//     guaranteedCharacters.push(getRandom(possibleCharacters));
-//   }
+  if (options.includeLowercase) {
+    possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);
+    guaranteedCharacters.push(getRandom(lowerCasedCharacters));
+  }
+  for (var i = guaranteedCharacters.length; i < options.length; i++) {
+    guaranteedCharacters.push(getRandom(possibleCharacters));
+  }
 
-//   // shuffle the guaranteed characters array to randomize the order
-//   guaranteedCharacters = guaranteedCharacters.sort(function () {
-//     return Math.random() - 0.5;
-//   });
-//   return guaranteedCharacters.join('');
-// }
+  // shuffle the guaranteed characters array to randomize the order
+  guaranteedCharacters = guaranteedCharacters.sort(function () {
+    return Math.random() - 0.5;
+  });
+  return guaranteedCharacters.join('');
+}
 
 // // Get references to the #generate element
 // var generateBtn = document.querySelector('#generate');
