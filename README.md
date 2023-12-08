@@ -2,6 +2,8 @@
 
 This is a simple password generator implemented in vanilla JavaScript. It allows users to customize the generated password by choosing the length and including different types of characters such as special characters, numeric characters, uppercase letters, and lowercase letters.
 
+![image](https://github.com/RobynWindsor/password-generator/assets/127926809/13c2f8c6-f75a-4031-8e70-72c59bcd8d8a)
+
 ## Features
 
 - Customizable password length (between 8 and 12 characters).
